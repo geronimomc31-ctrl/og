@@ -3,8 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OG - Productos</title>
-    <link rel="stylesheet" href="Producto01.css">
+    <title>OG - Rolex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000000;
+        }
+
+        /* Header y Navegación */
+        header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #FFD700;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+            border-bottom: 2px solid #FFD700;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #FFA500;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        /* Secciones */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #FFD700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Productos */
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .producto-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #333;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+            border-color: #FFD700;
+        }
+
+        .producto-img {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-bottom: 2px solid #FFD700;
+            overflow: hidden;
+        }
+
+        .producto-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .producto-info {
+            padding: 1.5rem;
+        }
+
+        .producto-info h3 {
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+        }
+
+        .producto-info p {
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        .precio {
+            font-size: 1.5rem;
+            color: #FFD700;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            color: #FFD700;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid #FFD700;
+        }
+
+        footer p {
+            color: #cccccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -24,26 +184,24 @@
     <section id="productos" style="margin-top: 100px;">
         <h2>Rolex</h2>
         <div class="productos-grid">
-            <!-- Producto 1 -->
+
             <a href="producto1.html" style="text-decoration: none;">
                 <div class="producto-card">
                     <div class="producto-img">
-                        <img src="media/Rolex Datejust 41.jpg" alt="Producto 1" width="149%" height="149%">
+                        <img src="media/Rolex Datejust 41.jpg" alt="Rolex Datejust 41">
                     </div>
                     <div class="producto-info">
                         <h3>Rolex Datejust 41</h3>
-                        <p>Los mejores modelos de Rolex <br> Calidad garantizada.</p>
-                        <div class="precio">$95,000
-                        </div>
+                        <p>Los mejores modelos de Rolex.<br>Calidad garantizada.</p>
+                        <div class="precio">$95,000</div>
                     </div>
                 </div>
             </a>
-            
-            <!-- Producto 2 -->
+
             <a href="producto2.html" style="text-decoration: none;">
                 <div class="producto-card">
                     <div class="producto-img">
-                        <img src="media/rolexGmt-master.jpg" alt="Producto 2" width="149%" height="149%">
+                        <img src="media/rolexGmt-master.jpg" alt="Rolex GMT-Master">
                     </div>
                     <div class="producto-info">
                         <h3>Rolex GMT-Master</h3>
@@ -52,12 +210,11 @@
                     </div>
                 </div>
             </a>
-            
-            <!-- Producto 3 -->
+
             <a href="producto3.html" style="text-decoration: none;">
                 <div class="producto-card">
                     <div class="producto-img">
-                        <img src="media/Rolex Submariner.jpg" alt="Producto 3" width="149%" height="149%">
+                        <img src="media/Rolex Submariner.jpg" alt="Rolex Submariner">
                     </div>
                     <div class="producto-info">
                         <h3>Rolex Submariner</h3>
@@ -66,12 +223,11 @@
                     </div>
                 </div>
             </a>
-            
-            <!-- Producto 4 -->
+
             <a href="producto4.html" style="text-decoration: none;">
                 <div class="producto-card">
                     <div class="producto-img">
-                        <img src="media/Rolex daytona.jpg" alt="Producto 4" width="149%" height="179%">
+                        <img src="media/Rolex daytona.jpg" alt="Rolex Daytona">
                     </div>
                     <div class="producto-info">
                         <h3>Rolex Daytona</h3>
@@ -81,11 +237,10 @@
                 </div>
             </a>
 
-            <!-- Producto 5 -->
             <a href="producto5.html" style="text-decoration: none;">
                 <div class="producto-card">
                     <div class="producto-img">
-                        <img src="media/Rolex Oyster Perpetual.jpg" alt="Producto 5" width="149%" height="149%">
+                        <img src="media/Rolex Oyster Perpetual.jpg" alt="Rolex Oyster Perpetual">
                     </div>
                     <div class="producto-info">
                         <h3>Rolex Oyster Perpetual</h3>
@@ -94,12 +249,11 @@
                     </div>
                 </div>
             </a>
-            
-            <!-- Producto 6 -->
+
             <a href="producto6.html" style="text-decoration: none;">
                 <div class="producto-card">
                     <div class="producto-img">
-                        <img src="media/Rolex Explorer.jpg" alt="Producto 6" width="149%" height="149%">
+                        <img src="media/Rolex Explorer.jpg" alt="Rolex Explorer">
                     </div>
                     <div class="producto-info">
                         <h3>Rolex Explorer</h3>
@@ -108,6 +262,7 @@
                     </div>
                 </div>
             </a>
+
         </div>
     </section>
 
@@ -117,5 +272,4 @@
         <p>Tu tienda de confianza</p>
     </footer>
 </body>
-
 </html>
